@@ -1,0 +1,13 @@
+#.htaccess for url managing
+
+#avoid ambiguity in calling files if the file names are the same
+Options -Multiviews
+
+#to Run Rewrite proccess
+RewriteEngine On
+
+#to ignore if file & method same name
+RewriteCond %{REQUEST_FILENAME} !=d 
+RewriteCond %{REQUEST_FILENAME} !=f
+
+RewriteRule ^(.*)$ index.php?url=$1 [L]

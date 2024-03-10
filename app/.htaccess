@@ -1,0 +1,2 @@
+#do not show != index.php/.html
+Options -Indexes
